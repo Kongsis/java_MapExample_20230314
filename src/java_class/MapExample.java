@@ -25,6 +25,11 @@ public class MapExample {
 		//값 : null
 		map1.remove(2);
 		System.out.println(map1.get(2));
+		
+		for(int key : map1.keySet()) {
+			System.out.println(key);
+			System.out.println(map1.get(key));
+		}
 	}
 
 }

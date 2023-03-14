@@ -17,6 +17,12 @@ public class MapExample2 {
 		
 		map2.remove("세번째");
 		System.out.println(map2.remove("세번째"));
+		
+		//map 반복문으로 접근 (for each 문)
+		for(String key : map2.keySet()) {
+			System.out.println(key); // key값 확인
+			System.out.println(map2.get(key)); // value값 확인
+		}
 	}
 
 }
