@@ -6,38 +6,38 @@ public class StudentMap {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Map<Integer, StudentDTO> studentMap = new HashMap<>();
+		//학생정보를 관리할 MAP
+		Map<Long, StudentDTO> studentMap = new HashMap<>();
+		StudentDTO studentDTO = new StudentDTO();
+		studentDTO.setId(1L);
+		studentDTO.setStudetnNumber("1111");
+		studentDTO.setStudentName("김자바");
+		studentDTO.setStudentMajor("컴퓨터공학");
+		studentDTO.setStudentMobile("010-1111-1111");
+		studentMap.put(studentDTO.getId(), studentDTO);
 		
 		StudentDTO studentDTO1 = new StudentDTO();
-		studentDTO1.no = 1;
-		studentDTO1.studetnNumber = 1111;
-		studentDTO1.studentName = "김자바";
-		studentDTO1.studentMajor = "컴퓨터공학";
-		studentDTO1.studentMobile = "010-1111-1111";
-		studentMap.put(1,studentDTO1);
-//		System.out.println(studentMap.get(1));
+		studentDTO1.setId(2L);
+		studentDTO1.setStudetnNumber("2222");
+		studentDTO1.setStudentName("이자바");
+		studentDTO1.setStudentMajor("경영학");
+		studentDTO1.setStudentMobile("010-2222-2222");
+		studentMap.put(studentDTO1.getId(), studentDTO1);
 		
 		StudentDTO studentDTO2 = new StudentDTO();
-		studentDTO2.no = 2;
-		studentDTO2.studetnNumber = 2222;
-		studentDTO2.studentName = "이자바";
-		studentDTO2.studentMajor = "경영학";
-		studentDTO2.studentMobile = "010-2222-2222";
-		studentMap.put(2,studentDTO2);
-//		System.out.println(studentMap.get(2));
-		
-		StudentDTO studentDTO3 = new StudentDTO();
-		studentDTO3.no = 3;
-		studentDTO3.studetnNumber = 3333;
-		studentDTO3.studentName = "박자바";
-		studentDTO3.studentMajor = "전자공학";
-		studentDTO3.studentMobile = "010-3333-3333";
-		studentMap.put(3,studentDTO3);
-//		System.out.println(studentMap.get(3));
+		studentDTO2.setId(3L);
+		studentDTO2.setStudetnNumber("3333");
+		studentDTO2.setStudentName("박자바");
+		studentDTO2.setStudentMajor("전자공학");
+		studentDTO2.setStudentMobile("010-3333-3333");
+		studentMap.put(studentDTO2.getId(), studentDTO2);
 		
 		
-		for(int st  : studentMap.keySet()) {
-			System.out.println(studentMap.get(st).toString());
+		for(Long id  : studentMap.keySet()) {
+			System.out.println(id);
+			System.out.println(studentMap.get(id)); // student 객체 출력
+			//학생의 이름만
+//			System.out.println(studentMap.get(id).getStudentName());
 		}
 		
 	}
