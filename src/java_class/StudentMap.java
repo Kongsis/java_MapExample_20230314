@@ -16,6 +16,18 @@ public class StudentMap {
 		studentDTO.setStudentMobile("010-1111-1111");
 		studentMap.put(studentDTO.getId(), studentDTO);
 		
+		StudentDTO studentDTO3 = new StudentDTO();
+		studentDTO3.setId(1L);
+		studentDTO3.setStudetnNumber("1111");
+		studentDTO3.setStudentName("김자바");
+		studentDTO3.setStudentMajor("컴퓨터공학");
+		studentDTO3.setStudentMobile("010-1111-1111");
+		studentMap.put(studentDTO.getId(), studentDTO);
+		
+		System.out.println(studentDTO.equals(studentDTO3));
+		System.out.println(studentDTO.getId().equals(studentDTO3.getId()));
+		
+		
 		StudentDTO studentDTO1 = new StudentDTO();
 		studentDTO1.setId(2L);
 		studentDTO1.setStudetnNumber("2222");
