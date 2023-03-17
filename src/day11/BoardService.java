@@ -89,7 +89,7 @@ public class BoardService {
 	}
 	public void search() {
 		System.out.print("검색어> ");
-		String name = sc.next();sc.nextLine();
+		String name = sc.nextLine();
 		List<BoardDTO> serchList = br.search(name);
 		System.out.println("글번호\t제목\t\t작성자\t조회수\t게시일");
 		System.out.println("---------------------------------------------------------");
